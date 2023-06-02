@@ -53,7 +53,7 @@ export const InfiniteScrollExample = () => {
 }; 
 
 
-  await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`,options)
+  await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=0b594805a17dec4e8de3882c93646258&language=en-US&page=${page}`,options)
   .then(response => response.json())
   .then(response =>( setItems([...items, ...response.results]),
                     setPage(page+ 1),setIsLoading(false),setThreeMovies(response.results)
@@ -100,14 +100,6 @@ useEffect(() => {
 
 
 
-const container={
-  display:"grid",
-  gridTemplateColumns:"auto auto auto",
-
-  position:"relative",
-  marginTop:"40%",
-  top:"60%"
-}
 
 
 return (<>
